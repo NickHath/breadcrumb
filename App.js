@@ -1,16 +1,18 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './screens/HomeScreen';
-import SettingsScreen from './screens/SettingsScreen';
+import ToursScreen from './src/screens/ToursScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
+import TourScreen from './src/screens/TourScreen';
 
 const Tab = createBottomTabNavigator();
   
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName='Home'>
-        <Tab.Screen name='Home' component={HomeScreen} />
+      <Tab.Navigator initialRouteName='Tours'>
+        <Tab.Screen name='Tours' component={ToursScreen} />
         <Tab.Screen name='Settings' component={SettingsScreen} />
+        <Tab.Screen name='Tour' component={TourScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
