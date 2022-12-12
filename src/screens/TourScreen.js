@@ -1,5 +1,6 @@
-import { View, Text, Button, TextInput } from 'react-native';
+import { View, ScrollView, Text, Pressable, TextInput, StyleSheet } from 'react-native';
 import { useState, useRef, useEffect } from 'react';
+import globalStyles from '../../styles/global';
 
 export default function TourScreen({ route }) {
   const { name, description } = route.params;
@@ -40,18 +41,30 @@ export default function TourScreen({ route }) {
         <TextInput 
           onChangeText={value => setInputValue(i, value)}
           value={refInputs.current[i]}
+          placeholder='Enter text here...'
+          style={globalStyles.input}
         />
-        <Button title='Delete Task' onPress={() => removeInput(i)}/>
+        <Pressable style={globalStyles.deleteButton} onPress={() => removeInput(i)}>
+          <Text style={globalStyles.buttonText}>Delete Task</Text>
+        </Pressable>
       </View>
     )
   }
 
   return (
-    <View>
-      <Text>{name}</Text>
-      <Text>{description}</Text>
+    <ScrollView style={styles.container}>
+      <Text style={globalStyles.header}>{name}</Text>
+      <Text style={globalStyles.text}>{description}</Text>
       { inputsJSX }
-      <Button title='Add Task' onPress={addInput}/>
-    </View>
+      <Pressable style={globalStyles.confirmButton} onPress={addInput}>
+        <Text style={globalStyles.buttonText}>Add Task</Text>
+      </Pressable>
+    </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+  }
+});

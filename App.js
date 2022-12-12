@@ -9,7 +9,19 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName='Tours'>
+      <Tab.Navigator 
+        initialRouteName='Tours'
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#FFA000'
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontSize: 20,
+            paddingBottom: 8,
+          },
+        }}
+      >
         <Tab.Screen name='Tours' component={ToursScreen} />
         <Tab.Screen name='Settings' component={SettingsScreen} />
         <Tab.Screen name='Tour' component={TourScreen} />

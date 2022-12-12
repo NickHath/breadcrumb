@@ -1,0 +1,70 @@
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  header: {
+    fontSize: 30,
+    marginBottom: 16,
+    marginTop: 16,
+    marginLeft: 8,
+    color: '#838383',
+  },
+  subHeader: {
+    fontSize: 24,
+    marginBottom: 8,
+    marginLeft: 8,
+    color: '#838383',
+  },
+  text: {
+    fontSize: 20,
+    padding: 12,
+  },
+  confirmButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#32CD32',
+    margin: 8,
+  },
+  deleteButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#FF5733',
+    margin: 8,
+  },
+  buttonText: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
+  },
+  card: {
+    backgroundColor: 'white',
+    shadowColor: '#171717',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    width: '90%',
+    marginBottom: 12,
+    borderRadius: 8,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 16,
+    paddingBottom: 16,
+  },
+  input: {
+    width: '90%',
+    fontSize: 24,
+    margin: 8,
+    borderLeftWidth: 5,
+    borderLeftColor: 'black',
+    paddingLeft: 8,
+  }
+});
